@@ -1,0 +1,16 @@
+diff --git a/drivers/mfd/intel-lpss-pci.c b/drivers/mfd/intel-lpss-pci.c
+index 713a5bf..9e3abdc 100644
+--- a/drivers/mfd/intel-lpss-pci.c
++++ b/drivers/mfd/intel-lpss-pci.c
+@@ -39,6 +39,11 @@ static const struct pci_device_id quirk_ids[] = {
+ 		PCI_DEVICE_SUB(PCI_VENDOR_ID_INTEL, 0x51fb, 0x1028, 0x0beb),
+ 		.driver_data = QUIRK_CLOCK_DIVIDER_UNITY,
+ 	},
++	{
++		/* Alienware x16 R1 (2023) SPI0 */
++		PCI_DEVICE_SUB(PCI_VENDOR_ID_INTEL, 0x51aa, 0x1028, 0x0bf0),
++		.driver_data = QUIRK_CLOCK_DIVIDER_UNITY,
++	},
+ 	{ }
+ };
+ 
